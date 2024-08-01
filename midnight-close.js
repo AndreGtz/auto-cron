@@ -7,7 +7,7 @@ const server = axios.create({
 
 server.defaults.headers.common['Authorization'] = `Bearer ${SECRETS.token}`;
 
-server.get('/controlrecorrido/midnightCloseAll/')
+server.post('/controlrecorrido/midnightcloseall/')
   .then((resp) => console.log(resp))
   .catch((error) => {
     if (error.response) {
