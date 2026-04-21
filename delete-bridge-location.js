@@ -7,7 +7,7 @@ const server = axios.create({
 
 server.defaults.headers.common['Authorization'] = `Bearer ${SECRETS.token}`;
 
-server.delete('/bridge-locations/')
+server.delete('/bridge')
   .then((resp) => console.log(`bridgeLocationsCleanup success: ${new Date()} ::`, resp.data))
   .catch((error) => {
     if (error.response) {
